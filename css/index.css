@@ -58,6 +58,7 @@
     li{
         text-align: center;
         line-height: 80px;
+        border-bottom: 2px solid #fff;
     }
     .author_name{
     	 position:absolute;
