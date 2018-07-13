@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/index.css">
 </head>
 <body>
+<img src="img/title.jpg" id="bac">
 <div class="contain">
   <p class="title">Welcome To My Web</p>
   <ul>
@@ -24,6 +25,9 @@
 <script type="text/javascript">
     var w = document.documentElement.clientWidth || document.body.clientWidth;
     var h = document.documentElement.clientHeight || document.body.clientHeight;
-	document.body.style.backgroundSize = w +"px "+ h + "px";
+    var bac = document.getElementById('bac');
+	bac.style.width = w+ "px";
+	bac.style.height = h+ "px";
+	//.style.backgroundSize = w +"px "+ h + "px";
 </script>
 </html>
