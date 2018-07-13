@@ -12,6 +12,8 @@
     	background-image: url(../img/title.jpg);
     	background-size: cover;
     	font-family: webindex;
+        border: 10px solid red;
+        box-sizing: border-box;
     }
     .contain{
     	width: 800px;
