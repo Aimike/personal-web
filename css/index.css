@@ -4,7 +4,7 @@
     }
     @font-face{
     	font-family: webindex;
-    	src: url('../font/webindex.TTF');
+    	src: url('../font/webindex.ttf');
     }
     @media screen and (max-width: 800px) {
       body {
