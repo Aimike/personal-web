@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>clock</title>
+		<style type="text/css">
+			*{
+				margin:0;
+				padding:0;
+			}
+			#wrap{
+				position:relative;
+				width:200px;
+				height:200px;
+				border:1px solid black;
+				border-radius:50%;
+				margin:150px auto;
+			}
+			ul{
+				list-style-type:none;
+				width:200px;
+				height:200px;
+			}
+			li{
+				position:absolute;
+				left:99px;
+				top:0;
+				width:2px;
+				height:10px;
+				text-align:center;
+				transform-origin:0px 100px;
+				background:black;
+				
+			}
+			.hour{
+				position:absolute;
+				left:97px;
+				top:80px;
+				width:6px;
+				height:20px;
+				background:red;
+				transform-origin:center bottom;
+			}
+			.min{
+				position:absolute;
+				left:98px;
+				top:50px;
+				width:4px;
+				height:50px;
+				background:green;
+				transform-origin:center bottom;
+			}
+			.sec{
+				position:absolute;
+				left:99px;
+				top:30px;
+				width:2px;
+				height:70px;
+				background:yellow;
+				transform-origin:center bottom;
+			}
+			.nn{
+				position:absolute;
+				left:90px;
+				top:90px;
+				width:20px;
+				height:20px;
+				border-radius:50%;
+				background:pink;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="wrap">
+			<ul>
+			</ul>
+			<div class="hour">
+			</div>
+			<div class="min">
+			</div>
+			<div class="sec">
+			</div>
+			<div class="nn">
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		var ul = document.querySelector("ul");
+		for(var i = 0;i < 60; i++){
+			ul.innerHTML += "<li></li>";
+			
+		}
+		var li = document.querySelectorAll('li');
+		for(var i = 0;i<60;i++){
+			li[i].style.transform = "rotate("+i*6+"deg)";
+			if(i%5 == 0){
+				li[i].style.height = 18+"px";
+				li[i].style.width = 4+"px";
+			}
+		}
+		var hour = document.querySelector('.hour');
+		var min = document.querySelector('.min');
+		var sec = document.querySelector('.sec');
+        fun();
+		setInterval(fun,1000);
+		function fun(){
+			var s = new Date().getSeconds();
+			var m = new Date().getMinutes()+s/60;
+			var h = new Date().getHours()+m/60;
+			 hour.style.transform = "rotate("+h*30+"deg)";
+			min.style.transform = "rotate("+m*6+"deg)"; 
+			sec.style.transform = "rotate("+s*6+"deg)"; 
+		}
+	</script>
+</html>
