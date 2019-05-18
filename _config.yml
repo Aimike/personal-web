@@ -1,23 +1,26 @@
 # Site settings
-title: 学渣不学渣
+name: 学渣不学渣
 email: 1754530626@foxmail.com
-description: 人生路漫长，只有坚持下去才能看见它最真实的美丽。很多时候，我们不是败给了难题，而是败给了自己。
-# > # this means to ignore newlines until "baseurl:"
-#   Write an awesome description for your new site here. You can edit this
-#   line in _config.yml. It will appear in your document head meta (for
-#   Google search results) and in your feed.xml site description.
+author: qujialin
+url: http://www.qujialin.cn
+resume_site: http://www.qujialin.cn/index.html/
+github: https://github.com/qujialin/
+baseurl: ""
+description: 不安于现状，不甘于平庸！
+meta_description: 屈佳林;个人博客;学而不思则罔;思而不学则殆
+motto: It's our wits that make us men.
+banner: 学而不思则罔，思而不学则殆。
 
-baseurl: "" # the subpath of your site, e.g. /blog/
-# url: "http://yourdomain.com" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
-github_username:  qujialin
-permalink: /:year/:month/:day/:title/
+permalink: /:categories/:year/:month/:day/:title/
+#permalink: /:year/:month/:day/:title/
+paginate: 10
+
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile', 'Rakefile']
+
+github_username: qujialin
 
 # Build settings
 markdown: kramdown
 
-# highlight
-# 本地用rouge, github上用pygments
-# highlighter: pygments
-# highlighter: rouge
-# highlighter: false
+#baidu_analysis: 94be4b0f9fc5d94cc0d0415ea6761ae9
+
